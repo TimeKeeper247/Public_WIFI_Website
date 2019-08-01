@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta property="og:title" content="Wifispot">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cab230.sef.qut.edu.au/Students/n9554181/index.html">
+  <meta property="og:image" content="https://cab230.sef.qut.edu.au/Students/n9554181/img/logo.png">
+
+  <!-- Grid stylesheet -->
+  <link rel="stylesheet" href="css/grid.css" type="text/css">
+
+  <!-- Main website's stylesheet -->
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+
+  <!-- Fontawesome Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+
+  <!-- <script src="js/map.js"></script> -->
+  <title>Wifispot</title>
+</head>
+
+<body>
+  <!-- Navigation for all other pages -->
+  <header class="navigationMenu">
+    <nav>
+      <div class="container">
+        <div class="row">
+          <div class="col-6 left">
+            <a class="navBtns" href="index.html">Home</a>
+            <a class="navBtns" href="results.html">Results</a>
+            <a class="navBtns" href="individual.html">Individual</a>
+          </div>
+          <div class="col-6 right">
+            <a id="accountBtn" href="registration.html">Account</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Individual section - Showing each individual wifi hotspots -->
+  <main class="individualSection">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="row" id="backResults">
+            <a href="results.html"><i class="fas fa-arrow-left"></i> Back to results</a>
+          </div>
+          <div class="row">
+            <div class="individualBanner">
+              <img src="img/individual-banner.jpg" alt="Wifispot banner">
+            </div>
+          </div>
+          <div class="row">
+            <h1>New Farm Library Wifi</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-8">
+          <div class="row">
+            <div class="individualWidget">
+              <h3 class="widgetTitle">Description</h3>
+              <p class="widgetContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas auctor interdum diam, in hendrerit sem varius id. Aliquam id eros nec elit pretium mollis. Sed sit amet urna bibendum enim consectetur feugiat. Nunc libero elit, sodales at fringilla a, ultrices ut mauris. Nulla nec molestie est. Cras augue justo, pellentesque non aliquam id, varius at tortor. In quis porta ipsum, ut porta nisl. Mauris ipsum ipsum, semper vel lectus consequat, eleifend commodo justo. Ut ultricies malesuada tellus nec luctus. Praesent vel sagittis elit, quis laoreet dui. In laoreet luctus mauris in maximus. Integer orci eros, egestas at sem in, semper hendrerit urna. Duis at placerat arcu, efficitur faucibus sapien.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="individualWidget">
+              <h3 class="widgetTitle">Comments</h3>
+              <div class="widgetComment">
+                <p class="commentAuthor font-heavy">John Doe</p>
+                <span class="commentRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                <p class="commentContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              <div class="widgetComment">
+                <p class="commentAuthor font-heavy">John Doe</p>
+                <span class="commentRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                <p class="commentContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="individualWidget">
+              <h3 class="widgetTitle">New Comment</h3>
+              <div class="col-12">
+                <p>Select your rating: <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></p>
+              </div>
+              <form>
+                <div class="col-6">
+                  <div class="commentFields">
+                    <input class="commentInput" type="text" name="commentName" placeholder="Full Name">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="commentFields">
+                    <input class="commentInput" type="text" name="commentEmail" placeholder="Email Address">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="commentFields">
+                    <textarea rows="10" name="commentMessage" placeholder="Your Review"></textarea>
+                  </div>
+                </div>
+                <a href="individual.html" class="btns btn">
+                  <div class="icon commentIcon"><i class="fas fa-paper-plane"></i></div>
+                  <span>Submit</span>
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+        <aside class="col-4">
+          <div class="row">
+            <div class="individualWidget">
+              <h3 class="widgetTitle">Location</h3>
+              <div id="individualMap"></div>
+              <p class="widgetDescription">Location: 135 Sydney Street, New Farm, 4005</p>
+              <p class="widgetDescription">Rating: 5 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer section - Comprising of Website name, Sitemap and Social links -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <h3 id="footerLogo"><a href="index.html">Wifispot</a></h3>
+        </div>
+        <div class="col-4">
+          <div class="footerTitle font-heavy mb20px">Sitemap</div>
+          <ul class="sitemapList">
+            <li><a href="results.html">Results</a></li>
+            <li><a href="individual.html">Individual</a></li>
+            <li><a href="registration.html">Account</a></li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <div class="footerTitle font-heavy mb20px">Follow Us</div>
+          <div class="socialButtons">
+            <a href="#" class="socialButton facebookLogo"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="socialButton instagramLogo"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="socialButton twitterLogo"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Google maps API and Javascript -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhSI0bxEbtth95myJ0oG2UYXko6CeKwHI&callback=initMap"></script>
+  <script src="js/individual-map.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<?php
+//$pdo = new PDO('mysql:host=localhost;dbname=wifi_hotspots', 'root', '');
+//$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$pdo = mysqli_connect("localhost","root","");
+
+mysqli_select_db($pdo, "wifi_hotspots");
+
+$search_value = mysqli_real_escape_string($pdo, $_POST["searchInput"]);
+
+//$result = mysqli_query($pdo, "SELECT `Wifi Hotspot Name`, Address, Suburb FROM hotspots WHERE `Wifi Hotspot Name` LIKE '%$search_value%' OR Address LIKE '%$search_value%' OR Suburb LIKE '%$search_value%'");
+//if($result === FALSE) { 
+//    die(mysql_error()); // Error if no result made
+//}
+
+    $keywords = explode(" ", trim($_POST["searchName"]));
+    for ($i=0; $i<count($keywords); $i++) {
+
+	if(!empty($keywords[$i])) {
+
+      $query = "SELECT * FROM hotspots " .
+      "WHERE (`Wifi Hotspot Name` LIKE '%".trim(mysqli_real_escape_string($pdo, $keywords[$i]))."%' 
+      OR Address LIKE '%".trim(mysqli_real_escape_string($pdo, $keywords[$i]))."%'  
+      OR Suburb LIKE '%".trim(mysqli_real_escape_string($pdo, $keywords[$i]))."%'
+      ) ";
+      $sql = mysqli_query($pdo, $query) or die(mysql_error());
+	   while ($row = mysqli_fetch_assoc($sql)) {
+echo "<div id='link' onClick='addText(\"".$row['Wifi Hotspot Name']."\");'>" . $row['Wifi Hotspot Name'] . " " . $row['Address'] . " " . $row['Suburb'] . "</div>";  
+ }
+
+    }
+
+}
+
+ while ($row = mysqli_fetch_assoc($sql)) {
+echo "<div id='link' onClick='addText(\"".$row['Wifi Hotspot Name']."\");'>" . $row['Wifi Hotspot Name'] . " " . $row['Address'] . " " . $row['Suburb'] . "</div>";  
+ }
+?>

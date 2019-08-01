@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta property="og:title" content="Wifispot">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cab230.sef.qut.edu.au/Students/n9554181/index.html">
+  <meta property="og:image" content="https://cab230.sef.qut.edu.au/Students/n9554181/img/logo.png">
+
+  <!-- Grid stylesheet -->
+  <link rel="stylesheet" href="css/grid.css" type="text/css">
+
+  <!-- Main website's stylesheet -->
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+
+  <!-- Fontawesome Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+  <title>Wifispot</title>
+</head>
+
+<body>
+  <!-- Navigation for homepage only -->
+  <header id="mainHeader">
+    <nav>
+      <div class="container">
+        <div class="row">
+          <div class="col-6 left">
+            <a class="navBtns" href="index.html">Home</a>
+            <a class="navBtns" href="results.html">Results</a>
+            <a class="navBtns" href="individual.html">Individual</a>
+          </div>
+          <div class="col-6 right">
+            <a id="accountBtn" href="reg_form.php">Account</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search section - Comprising of a search form to search based on location, suburb and rating. -->
+    <section class="searchBody">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 center">
+            <div id="headerArea" class="mb20px">
+              <h1 class="font-heavy mb15px">Locate the nearest wifi hotspot</h1>
+              <span class="subtitle mb15px">With just a click of a button, Wifispot will help you to locate the nearest wifi hotspot in Brisbane</span>
+            </div>
+              <!-- Search Form (to be made into a correct form in stage 2.) -->
+			<form action="results.php" method="GET">
+            <div class="row">
+              <div class="col-3">
+                <input id="searchInput" class="searchInput" name="searchInput" type="text" placeholder="Where">
+              </div>
+              <!-- Suburbs to be sorted according to alphabetical order -->
+              <div class="col-3">
+                <select class="searchInput" name="searchSuburb">
+                  <option value="" disabled selected>Suburb</option>
+                  <option value="suburbAnnerley">Annerley</option>
+                  <option value="suburbAshgrove">Ashgrove</option>
+                  <option value="suburbBanyo">Banyo</option>
+                  <option value="suburbBellbowrie">Bellbowrie</option>
+                  <option value="suburbBrackenRidge">Bracken Ridge</option>
+                  <option value="suburbBrisbane">Brisbane</option>
+                  <option value="suburbBulimba">Bulimba</option>
+                  <option value="suburbChermside">Chermside</option>
+                  <option value="suburbCalamvale">Calamvale</option>
+                  <option value="suburbCarina">Carina</option>
+                  <option value="suburbCarindale">Carindale</option>
+                  <option value="suburbBrisbaneCity">Brisbane City</option>
+                  <option value="suburbCoopersPlains">Coopers Plains</option>
+                  <option value="suburbCorinda">Corinda</option>
+                  <option value="suburbMacGregor">MacGregor</option>
+                  <option value="suburbSandgate">Sandgate</option>
+                  <option value="suburbEvertonPark">Everton Park</option>
+                  <option value="suburbFairfield">Fairfield</option>
+                  <option value="suburbForestLake">Forest Lake</option>
+                  <option value="suburbUpperMountGravatt">Upper Mount Gravatt</option>
+                  <option value="suburbHollandParkWest">Holland Park West</option>
+                  <option value="suburbGrange">Grange</option>
+                  <option value="suburbPaddingon">Paddingon</option>
+                  <option value="suburbStLucia">St Lucia</option>
+                  <option value="suburbToowong">Toowong</option>
+                  <option value="suburbHamilton">Hamilton</option>
+                  <option value="suburbFitzgibbon">Fitzgibbon</option>
+                  <option value="suburbHollandPark">Holland Park</option>
+                  <option value="suburbInala">Inala</option>
+                  <option value="suburbIndooroopilly">Indooroopilly</option>
+                  <option value="suburbClayfield">Clayfield</option>
+                  <option value="suburbKenmore">Kenmore</option>
+                  <option value="suburbMitchelton">Mitchelton</option>
+                  <option value="suburbMtGravatt">Mt Gravatt</option>
+                  <option value="suburbMtOmmaney">Mt Ommaney</option>
+                  <option value="suburbNewFarm">New Farm</option>
+                  <option value="suburbNundah">Nundah</option>
+                  <option value="suburbAscot">Ascot</option>
+                  <option value="suburbWestEnd">West End</option>
+                  <option value="suburbSeventeenMileRocks">Seventeen Mile Rocks</option>
+                  <option value="suburbStonesCorner">Stones Corner</option>
+                  <option value="suburbSunnybankHills">Sunnybank Hills</option>
+                  <option value="suburbWynnum">Wynnum</option>
+                  <option value="suburbZillmere">Zillmere</option>
+                </select>
+              </div>
+              <div class="col-3">
+                <select class="searchInput" name="searchRating">
+                  <option value="" disabled selected>Rating</option>
+                  <option value="rating1">1</option>
+                  <option value="rating2">2</option>
+                  <option value="rating3">3</option>
+                  <option value="rating4">4</option>
+                  <option value="rating5">5</option>
+                </select>
+              </div>
+              <div class="col-3">
+                <a href="results.html" class="btns btn">
+                  <div class="icon"><i class="fas fa-search"></i></div>
+                  <span>Search</span>
+                </a>
+				<input id="submit" class="btns btn" type="submit" value="submit">
+              </div>
+            </div>
+			</form>
+
+            <!-- Search based on user's location -->
+            <div class="row">
+              <div class="col-12 center">
+                <p>or</p>
+                <p class="subtitle">Search based on your location</p>
+                <button onclick="getLocation()" class="btns btn">
+                  <i class="icon"><i class="fas fa-map-pin"></i></i>
+                  <span>Locate</span>
+                </button>
+                <p id="coordinates"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- Homepage main - Comprising of the top 3 wifi hotspots -->
+  <main>
+    <section class="mainArea">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 center">
+            <div class="mainHeader">
+              <h2 class="mainTitle font-heavy">Top Spots</h2>
+              <p class="mainSubtitle">Our top 3 wifi hotspots!</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <div class="thumbnail">
+              <div class="thumbnailImage">
+                <img src="img/coming-soon.jpg" alt="">
+              </div>
+              <div class="thumbnailCaption">
+                <h3 class="thumbnailTitle"><a href="individual.html">Annerley Library Wifi</a></h3>
+                <span class="thumbnailRatings"> 4 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>
+                <a href="individual.html" class="btns btn thumbnailButton">
+                  <div class="icon"><i class="fas fa-eye"></i></div>
+                  <span>View</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="thumbnail">
+              <div class="thumbnailImage">
+                <img src="img/coming-soon.jpg" alt="">
+              </div>
+              <div class="thumbnailCaption">
+                <h3 class="thumbnailTitle"><a href="individual.html">Bulimba Library Wifi</a></h3>
+                <span class="thumbnailRatings"> 5 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                <a href="individual.html" class="btns btn thumbnailButton">
+                  <div class="icon"><i class="fas fa-eye"></i></div>
+                  <span>View</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="thumbnail">
+              <div class="thumbnailImage">
+                <img src="img/coming-soon.jpg" alt="">
+              </div>
+              <div class="thumbnailCaption">
+                <h3 class="thumbnailTitle"><a href="individual.html">Orleigh Park</a></h3>
+                <span class="thumbnailRatings"> 3 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span>
+                <a href="individual.html" class="btns btn thumbnailButton">
+                  <div class="icon"><i class="fas fa-eye"></i></div>
+                  <span>View</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer section - Comprising of Website name, Sitemap and Social links -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <h3 id="footerLogo"><a href="index.html">Wifispot</a></h3>
+        </div>
+        <div class="col-4">
+          <div class="footerTitle font-heavy mb20px">Sitemap</div>
+          <ul class="sitemapList">
+            <li><a href="results.html">Results</a></li>
+            <li><a href="individual.html">Individual</a></li>
+            <li><a href="registration.html">Account</a></li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <div class="footerTitle font-heavy mb20px">Follow Us</div>
+          <div class="socialButtons">
+            <a href="#" class="socialButton facebookLogo"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="socialButton instagramLogo"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="socialButton twitterLogo"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External Javascript file linking -->
+  <script src="js/location.js"></script>
+</body>
+</html>

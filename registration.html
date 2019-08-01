@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta property="og:title" content="Wifispot">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cab230.sef.qut.edu.au/Students/n9554181/index.html">
+  <meta property="og:image" content="https://cab230.sef.qut.edu.au/Students/n9554181/img/logo.png">
+
+  <!-- Grid stylesheet -->
+  <link rel="stylesheet" href="css/grid.css" type="text/css">
+
+  <!-- Main website's stylesheet -->
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+
+  <!-- Fontawesome Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+  <title>Wifispot</title>
+</head>
+
+<body>
+  <!-- Navigation for all other pages -->
+  <header class="navigationMenu">
+    <nav>
+      <div class="container">
+        <div class="row">
+          <div class="col-6 left">
+            <a class="navBtns" href="index.html">Home</a>
+            <a class="navBtns" href="results.html">Results</a>
+            <a class="navBtns" href="individual.html">Individual</a>
+          </div>
+          <div class="col-6 right">
+            <a id="accountBtn" href="registration.html">Account</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Registration / Login section - Users can opt to register or login onto the website -->
+  <section class="titleCover">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 center">
+          <h2>Register / Login</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Registration section - Username, Email and Password is required to register -->
+  <main class="registrationSection">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="individualWidget">
+            <h3 class="widgetTitle">Register</h3>
+            <form action="#" method="get" id="formRegister">
+              <div class="col-12">
+                <div class="commentFields">
+                  <label for="registerUsername">Username</label>
+                  <input class="commentInput" type="text" name="registerUsername" id="registerUsername" placeholder="Userame" required>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="commentFields">
+                  <label for="registerEmail">Email Address</label>
+                  <input class="commentInput" type="email" name="registerEmail" id="registerEmail" placeholder="Email Address" required>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="commentFields">
+                  <label for="registerPassword">Password</label>
+                  <input class="commentInput" type="password" name="registerPassword" id="registerPassword" placeholder="Password" required>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="commentFields">
+                  <label for="registerConfirmPassword">Confirm Password</label>
+                  <input class="commentInput" type="password" name="registerConfirmPassword" id="registerConfirmPassword" placeholder="Confirm Password" required>
+                </div>
+              </div>
+              <div class="col-12 left">
+                <input type="checkbox" name="registerAgree" required><span class="accountCheckboxText">I agree to the Terms and Conditions</span>
+              </div>
+              <button class="btns btn" type="submit" form="formRegister">
+                <i class="icon commentIcon"><i class="fas fa-paper-plane"></i></i>
+                <span>Register</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Login section - Correct username and password is required to login -->
+        <div class="col-6">
+          <div class="individualWidget">
+            <h3 class="widgetTitle">Login</h3>
+            <form action="#" method="get" id="formLogin">
+              <div class="col-12">
+                <div class="commentFields">
+                  <label for="loginUsername">Username</label>
+                  <input class="commentInput" type="text" name="loginUsername" id="loginUsername" placeholder="Username" required>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="commentFields">
+                  <label for="loginPassword">Password</label>
+                  <input class="commentInput" type="password" name="loginPassword" id="loginPassword" placeholder="Password" required>
+                </div>
+              </div>
+              <div class="col-12 left">
+                <input type="checkbox" name="loginStay"><span class="accountCheckboxText">Stay logged in</span>
+              </div>
+              <button class="btns btn" type="submit" form="formLogin">
+                <i class="icon commentIcon"><i class="fas fa-paper-plane"></i></i>
+                <span>Login</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer section - Comprising of Website name, Sitemap and Social links -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <h3 id="footerLogo"><a href="index.html">Wifispot</a></h3>
+        </div>
+        <div class="col-4">
+          <div class="footerTitle font-heavy mb20px">Sitemap</div>
+          <ul class="sitemapList">
+            <li><a href="results.html">Results</a></li>
+            <li><a href="individual.html">Individual</a></li>
+            <li><a href="registration.html">Account</a></li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <div class="footerTitle font-heavy mb20px">Follow Us</div>
+          <div class="socialButtons">
+            <a href="#" class="socialButton facebookLogo"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="socialButton instagramLogo"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="socialButton twitterLogo"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

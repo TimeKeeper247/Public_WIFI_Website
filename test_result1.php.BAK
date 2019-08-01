@@ -1,0 +1,32 @@
+<?php
+$pdo = new PDO('mysql:host=localhost;dbname=wifi_hotspots', 'root', '');
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$search_value = filter_input(INPUT_GET, 'searchInput');
+$searched_words = explode(" ", trim($search_value));
+$words_lower = array_map('strtolower', $searched_words);
+$unique_words = array_unique($words_lower);
+
+$common_words = array("in","it","a","the","of","or","I","you","he","me","us","they","she","to","but","that","this","those","then","there","where","like","stuff","things","are");
+$keywords = array_diff($unique_words, $common_words);
+print_r($keywords);
+
+
+for ($i=0; $i<count($keywords); $i++) {
+	if(!empty($keywords[$i])) {
+		$sql = "SELECT * FROM hotspots " .
+			  "WHERE (`Wifi Hotspot Name` LIKE :keyword 
+			  OR Address LIKE :keyword 
+			  OR Suburb LIKE :keyword
+			  ) ";
+		$query = $pdo->prepare($sql);
+		$query->bindValue(':keyword', '%' . trim($keywords[0]) . '%');
+		$query->execute();
+
+		while ($result = $query->fetch(PDO::FETCH_ASSOC)) {
+			echo "<pre> " . print_r($result, true) . "</pre>";
+			print_r($result["Wifi Hotspot Name"]);
+		}
+	}
+}
+?> 
